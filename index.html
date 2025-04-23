@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latita Forensic Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<style>
+    @font-face {
+      font-family: 'MFEK Sans Rounded';
+      src: url('path-to-your-font/MFEKSansRounded.ttf') format('truetype');
+    }
+
+    body {
+      font-family: 'MFEK Sans Rounded', sans-serif;
+    }
+
+    /* Header Banner */
+    .title {
+      font-size: 90pt;
+      font-weight: 600; /* Semi Bold */
+      color: #FFFFFF;
+    }
+    .sub-title {
+      font-size: 32pt;
+      font-weight: 600; /* Semi Bold */
+      color: #FFFFFF;
+    }
+
+    /* Buttons */
+    .button-text {
+      font-size: 23pt;
+      font-weight: 600; /* Semi Bold */
+      color: #FFFFFF;
+    }
+    .button-red {
+      background-color: #C00000;
+      border-radius: 9999px; /* Fully rounded */
+    }
+
+    /* Headings */
+    .main-heading {
+      font-size: 75pt;
+      font-weight: 600; /* Semi Bold */
+    }
+    .second-heading {
+      font-size: 45pt;
+      font-weight: 300; /* Light */
+    }
+
+    /* Body Text */
+    .body-text {
+      font-size: 30pt;
+      font-weight: 300; /* Light */
+    }
+
+    /* Read More Button */
+    .read-more {
+      font-size: 23pt;
+      font-weight: 700; /* Bold */
+      color: #C00000;
+    }
+
+    /* Section Titles (Sun Headers) */
+    .section-title {
+      font-size: 30pt;
+      font-weight: 700; /* Bold */
+    }
+
+    /* Form Header */
+    .form-header {
+      font-size: 75pt;
+      font-weight: 600; /* Semi Bold */
+    }
+    .form-title {
+      font-size: 30pt;
+      font-weight: 400; /* Regular */
+    }
+
+    /* Filter Tab */
+    .filter-tab {
+      font-size: 20pt;
+      font-weight: 400; /* Regular */
+      background-color: rgba(35, 31, 32, 0.95); /* #231F20 with 95% opacity */
+    }
+
+    /* Search Titles */
+    .search-title {
+      font-size: 23pt;
+      font-weight: 600; /* Semi Bold */
+    }
+
+    /* Article Preview */
+    .article-title {
+      font-size: 30pt;
+      font-weight: 700; /* Bold */
+    }
+    .article-date {
+      font-size: 23pt;
+      font-weight: 400; /* Regular */
+      color: #C00000;
+    }
+
+    /* Load More Button */
+    .load-more {
+      font-size: 30pt;
+      font-weight: 700; /* Bold */
+      color: #C00000;
+    }
+
+     /* Hero Section with Background Image */
+   /* Hero Section with Background Image */
+ .hero-section {
+  background-image: url('img/background_img.jpg'); /* Replace with your image path */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to the bottom */
+  align-items: flex-start;   /* ✅ Align content to the left */
+  padding: 2rem;             /* Use padding instead of padding-bottom only */
+}
+
+  .sub-title {
+    margin-top: 1rem; /* Adds spacing between the title and sub-title */
+  }
+
+ /* Custom Section with Black Background and White Text */
+  /* Customizable Section */
+  .customizable-section {
+    background-color: var(--section-bg-color, rgb(27, 26, 26)); /* Default to light gray */
+    color: var(--section-text-color, rgb(255, 255, 255)); /* Default to black text */
+    padding: 6rem 1.5rem; /* Equivalent to py-24 px-6 */
+    display: flex; /* Enables flexbox for layout */
+    justify-content: space-between; /* Spaces content to the left and right */
+    align-items: center; /* Vertically centers the content */
+  }
+
+  .customizable-section .left-content {
+    font-size: 1pt; /* Regular font size */
+    font-weight: 300; /* Light */
+    text-align: left; /* Aligns text to the left */
+    max-width: 40%; /* Restricts width for better layout */
+  }
+
+ .customizable-section .Right-Content {
+  font-size: 60pt; /* Increased font size */
+    font-weight: 700; /* Bold */
+    text-align: center; /* Centers the text horizontally */
+    display: flex; /* Enables flexbox for alignment */
+    flex-direction: column; /* Ensures text flows vertically */
+    justify-content: center; /* Centers the text vertically */
+    align-items: center; /* Centers the text horizontally */
+    height: 100%; /* Ensures the container takes full height */
+    line-height: 1.2;
+  }
+
+  .customizable-section .Right-Content h2 {
+    font-size: inherit; /* Inherits the font size from the parent */
+    font-weight: inherit; /* Inherits the bold weight from the parent */
+    line-height: 1.2; /* Adjusts line spacing for better readability */
+  }
+
+   /* Services Section Styling */
+  .services-section {
+    width: 100vw; /* Full width of the viewport */
+    min-height: 100vh; /* Ensures the section takes up the full height of the viewport */
+    background-color:hsl(0, 0.00%, 100.00%); /* Light gray background */
+    padding: 6rem 2rem; /* Adds spacing inside the section */
+    display: flex; /* Enables flexbox for alignment */
+    flex-direction: column; /* Ensures content flows vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+  }
+
+  .services-section .container {
+    max-width: 1400px; /* Increases the width of the container */
+    margin: 0 auto; /* Centers the container horizontally */
+  }
+
+  .services-section .main-heading {
+    color: #C00000; 
+    font-size: 45pt; /* Enlarges the section title */
+    font-weight: 700; /* Makes the title bold */
+    text-align: center; /* Centers the title */
+    margin-bottom: 3rem; /* Adds spacing below the title */
+  }
+
+  .services-section .grid {
+    font-size: 15pt; /* Enlarges the section title */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Single column for small screens */
+    gap: 2rem; /* Adds spacing between grid items */
+    width: 115%; /* Ensures the grid spans the full width of the container */
+  }
+
+  @media (min-width: 768px) {
+    .services-section .grid {
+      grid-template-columns: repeat(3, 1fr); /* Three columns for medium and larger screens */
+    }
+  }
+
+  .contact-us-section.Right-Content {
+  font-size: 100pt; /* Increased font size */
+    font-weight: 700; /* Bold */
+    text-align: center; /* Centers the text horizontally */
+    display: flex; /* Enables flexbox for alignment */
+    flex-direction: column; /* Ensures text flows vertically */
+    justify-content: center; /* Centers the text vertically */
+    align-items: center; /* Centers the text horizontally */
+    height: 100%; /* Ensures the container takes full height */
+    line-height: 1.2;
+  }
+
+  .contact-us-section .Right-Content h2 {
+    font-size: inherit; /* Inherits the font size from the parent */
+    font-weight: inherit; /* Inherits the bold weight from the parent */
+    line-height: 1.2; /* Adjusts line spacing for better readability */
+  }
+
+  .contact-us-section {
+    background-color: var(--section-bg-color, rgb(255, 255, 255)); /* Default to light gray */
+    color: var(--section-text-color, rgb(5, 4, 4)); /* Default to black text */
+    padding: 6rem 1.5rem; /* Equivalent to py-24 px-6 */
+    display: flex; /* Enables flexbox for layout */
+    justify-content: space-between; /* Spaces content to the left and right */
+    align-items: center; /* Vertically centers the content */
+  }
+
+  .contact-us-section .left-content {footer-section
+    font-size: 1pt; /* Regular font size */
+    font-weight: 300; /* Light */
+    text-align: left; /* Aligns text to the left */
+    max-width: 40%; /* Restricts width for better layout */
+  }
+
+  .footer-section.Right-Content {
+  font-size: 100pt; /* Increased font size */
+    font-weight: 700; /* Bold */
+    text-align: center; /* Centers the text horizontally */
+    display: flex; /* Enables flexbox for alignment */
+    flex-direction: column; /* Ensures text flows vertically */
+    justify-content: center; /* Centers the text vertically */
+    align-items: center; /* Centers the text horizontally */
+    height: 100%; /* Ensures the container takes full height */
+    line-height: 1.2;
+  }
+
+  .footer-section .Right-Content h2 {
+    font-size: inherit; /* Inherits the font size from the parent */
+    font-weight: inherit; /* Inherits the bold weight from the parent */
+    line-height: 1.2; /* Adjusts line spacing for better readability */
+  }
+
+  .footer-section {
+    background-color: var(--section-bg-color, rgb(255, 255, 255)); /* Default to light gray */
+    color: var(--section-text-color, rgb(5, 4, 4)); /* Default to black text */
+    padding: 6rem 1.5rem; /* Equivalent to py-24 px-6 */
+    display: flex; /* Enables flexbox for layout */
+    justify-content: space-between; /* Spaces content to the left and right */
+    align-items: center; /* Vertically centers the content */
+  }
+
+  .footer-section .left-content {
+    font-size: 1pt; /* Regular font size */
+    font-weight: 300; /* Light */
+    text-align: left; /* Aligns text to the left */
+    max-width: 40%; /* Restricts width for better layout */
+  }
+  
+
+  
+</style>
+</head>
+<body class="bg-white text-gray-800">
+
+
+ <!-- Hero Section -->
+<section class="hero-section bg-black text-white text-left py-16 mt-16">
+  <div class="left-content">
+    <div class="max-w-4xl mx-auto space-y-6">
+      <p class="title text-5xl font-bold">Forensic Services</p>
+      <h1 class="sub-title text-xl font-light">
+        Tax | Legal | Advisory | Risk Assurance | Tax Debt Specialists
+      </h1>
+      <div class="flex justify-left gap-2">
+        <button class="button-red button-text px-7 py-2">
+          Book a Consultation
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="customizable-section">
+    
+    <div class="left-content">
+     <p class="body-text mb-8">
+      Latita Africa offers specialised forensic services to assist clients in identifying, investigating,
+      and resolving financial discrepancies and legal disputes. Our comprehensive approach ensures
+      thorough analysis and objective reporting.
+    </p>
+  </div>
+
+
+  
+
+  <!-- Right Content -->
+<div class="Right-Content text-right flex flex-col justify-center items-end h-full pr-4">
+  <h2 class="font-semibold text-[75pt] leading-tight text-white">
+    Ensuring
+    Your Integrity
+    And Transparency
+  </h2>
+</div>
+   
+  </section>
+
+ <!-- Services Section -->
+<section class="services-section py-12 bg-white-100">
+  <div class="container mx-auto px-4">
+    <h2 class="main-heading text-3xl font-bold text-center mb-10">Forensic Tax Services</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl shadow p-6">
+        <h3 class="section-title mb-1 MFEK Sans Rounded Semi Bold text-lg">1. Independent Audit</h3>
+        <p class="body-text text-gray-700 text-lg">Unbiased evaluation of financial statements, ensuring accuracy and compliance.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6">
+        <h3 class="section-title mb-1 MFEK Sans Rounded Semi Bold text-lg" style="color: #C00000;">2. Independent Review</h3>
+        <p class="body-text text-gray-700 text-lg">Limited assurance engagements for stakeholders.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6">
+        <h3 class="section-title mb-1 MFEK Sans Rounded Semi Bold text-lg">3. Investigations and Queries</h3>
+        <p class="body-text text-gray-700 text-lg">Support for trust SARS compliance and submission.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6">
+        <h3 class="section-title mb-1 MFEK Sans Rounded Semi Bold text-lg" style="color: #C00000;">4. Estate Planning</h3>
+        <p class="body-text text-gray-700 text-lg">Tax-efficient trust incorporation into estate plans.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6">
+        <h3 class="section-title mb-1 MFEK Sans Rounded Semi Bold text-lg">5. Trust Restructuring</h3>
+        <p class="body-text text-gray-700 text-lg">Adapting trusts to evolving legal, tax, or financial conditions.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6">
+        <h3 class="section-title mb-1 MFEK Sans Rounded Semi Bold text-lg" style="color: #C00000;">6. Wealth Protection and Asset Preservation</h3>
+        <p class="body-text text-gray-700 text-lg">Strategic advice to protect and preserve family or business assets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+<section class="contact-us-section">
+    
+    <div class="left-content">
+     <h2 class="font-semibold text-[55pt] leading-tight text-black">
+      Contact Us Today
+    </h2>
+    <p class="font-semibold text-[15pt] leading-tight text-black">
+    to schedule a consultation and let us make your
+    life a bit more easier.
+  </p>
+
+  <button class="button-red button-text px-10 py-4">Contact Us</button>
+  </div>
+
+
+  
+
+  <!-- Right Content -->
+<div class="Right-Content text-right flex flex-col justify-center items-end h-full pr-4">
+  <h3 class="font-semibold text-[35pt] leading-tight "style="color: #C00000;">
+  Ensuring your organisation
+  <br>maintains Integrity and
+   <br>transparency in all financial
+   matters.
+  </h3>
+</div>
+   
+  </section>
+
+
+
+  <!-- Consultation Form -->
+<div class="w-screen h-screen bg-gray-100 flex items-center justify-center">
+  <div class="w-full h-full bg-white p-10 rounded-none">
+    <h2 class="text-3xl font-bold text-gray-800 text-left mb-10">Request Service</h2>
+    
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+      <!-- Full Name -->
+      <div class="relative">
+        <input type="text" name="fullname" required
+          class="peer w-full bg-transparent border-b-2 border-gray-400 text-gray-800 placeholder-transparent focus:outline-none focus:border-purple-500"
+          placeholder="Full Name"/>
+        <label class="absolute left-0 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-purple-500">
+          Full Name
+        </label>
+      </div>
+
+      <!-- Email -->
+      <div class="relative">
+        <input type="text" name="email" required
+          class="peer w-full bg-transparent border-b-2 border-gray-400 text-gray-800 placeholder-transparent focus:outline-none focus:border-purple-500"
+          placeholder="Email Address"/>
+        <label class="absolute left-0 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-purple-500">
+          Email Address
+        </label>
+      </div>
+
+      <!-- Contact -->
+      <div class="relative">
+        <input type="text" name="contact"
+          class="peer w-full bg-transparent border-b-2 border-gray-400 text-gray-800 placeholder-transparent focus:outline-none focus:border-purple-500"
+          placeholder="Contact Number (Optional)"/>
+        <label class="absolute left-0 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-purple-500">
+          Contact Number (Optional)
+        </label>
+      </div>
+
+      <!-- Select Service -->
+      <div class="relative">
+        <input type="text" name="service" required
+          class="peer w-full bg-transparent border-b-2 border-gray-400 text-gray-800 placeholder-transparent focus:outline-none focus:border-purple-500"
+          placeholder="Select Service"/>
+        <label class="absolute left-0 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-purple-500">
+          Select Service
+        </label>
+      </div>
+
+      <!-- Further Info -->
+      <div class="relative">
+        <input type="text" name="info" required
+          class="peer w-full bg-transparent border-b-2 border-gray-400 text-gray-800 placeholder-transparent focus:outline-none focus:border-purple-500"
+          placeholder="Further Information"/>
+        <label class="absolute left-0 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-purple-500">
+          Further Information
+        </label>
+      </div>
+
+      <!-- Checkboxes Section -->
+      <div class="relative">
+        <!-- Earning Over Exemption -->
+        <div>
+          <label class="block mb-2 font-medium text-gray-700" style="color: #C00000;">Are you earning over the R1.25 mil tax exemption?</label>
+          <div class="grid grid-cols-3 gap-4 text-sm text-gray-800">
+            <label class="flex items-center space-x-2">
+              <input type="checkbox" required class="accent-purple-600" />
+              <span>Yes</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="checkbox" required class="accent-purple-600" />
+              <span>No</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Residing Abroad -->
+        <div>
+          <label class="block mb-2 font-medium text-gray-700" style="color: #C00000;">Do you plan on residing abroad permanently</label>
+          <div class="grid grid-cols-3 gap-4 text-sm text-gray-800">
+            <label class="flex items-center space-x-2">
+              <input type="checkbox" required class="accent-purple-600" />
+              <span>Yes</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input type="checkbox" required class="accent-purple-600" />
+              <span>No</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Where did you hear -->
+        <div>
+          <label class="block mb-2 font-medium text-gray-700" style="color: #C00000;">Where did you hear about us?</label>
+          <div class="grid grid-cols-3 gap-4 text-sm text-gray-800">
+            <label class="flex items-center space-x-2"><input type="checkbox" required class="accent-purple-600" /><span>Facebook</span></label>
+            <label class="flex items-center space-x-2"><input type="checkbox" required class="accent-purple-600" /><span>X</span></label>
+            <label class="flex items-center space-x-2"><input type="checkbox" required class="accent-purple-600" /><span>Instagram</span></label>
+            <label class="flex items-center space-x-2"><input type="checkbox" required class="accent-purple-600" /><span>LinkedIn</span></label>
+            <label class="flex items-center space-x-2"><input type="checkbox" required class="accent-purple-600" /><span>Online Publication</span></label>
+            <label class="flex items-center space-x-2"><input type="checkbox" required class="accent-purple-600" /><span>Word of Mouth</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Privacy Policy -->
+      <div class="flex items-start text-sm text-gray-600 md:col-span-2">
+        <input type="checkbox" required class="mr-2 mt-1 accent-purple-600" />
+        <p>
+          I have read the
+          <a href="#" class="text-purple-600 underline hover:text-purple-800">Privacy Policy</a>
+          and agree to its terms.
+        </p>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="md:col-span-2 text-left">
+        <button type="submit"
+          class="mt-6 px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl shadow-lg transition-all duration-300">
+          Send Request
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+   
+  </section>
+
+
+
+ <section class="customizable-section relative bg-black px-6 py-12 overflow-hidden min-h-[500px]">
+
+ <!-- Left Content -->
+<div class="left-content max-w-xl relative z-10 py-16 px-4 text-center">
+  <p class="body-text mb-6 text-white text-5xl font-bold">
+    Forensics
+  </p>
+
+  <div class="body-text mb-6 text-white text-2xl flex justify-between items-center border-b border-white pb-1">
+    <span>Independent audit</span>
+    <svg class="ml-80 w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+
+  <div class="body-text mb-6 text-white text-2xl flex justify-between items-center border-b border-white pb-1">
+    <span>Independent Review</span>
+    <svg class="ml-80 w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+
+  <div class="body-text mb-6 text-white text-2xl flex justify-between items-center border-b border-white pb-1">
+    <span>Investigation and queries</span>
+    <svg class="ml-80 w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+</div>
+
+  <!-- Right Image (Absolutely Positioned) -->
+  <img src="img/background_img.jpg"
+       alt="Integrity Illustration"
+       class="absolute bottom-0 right-0 w-[700px] h-auto rounded-xl z-0 object-contain" />
+
+</section>
+
+ 
+
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-16 px-4">
+   <p class="body-text mb-6 text-white text-5xl font-bold">
+    Contact our qualified consultants
+  </p>
+    <p class="body-text mb-6 text-white text-2xl">Discover how Latita Africa can assist you.</p>
+    <button class="button-red button-text px-10 py-4">Request a callback</button>
+  </footer>
+
+
+
+ <footer class="footer-area footer--light bg-white-100 text-gray-800">
+<div class="bg-white -gray-200 py-4">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-sm text-gray-700">
+      <!-- Find Us -->
+      <div class="flex items-center justify-center space-x-2">
+        <i class="fas fa-map-marker-alt text-red-600 text-lg"></i>
+        <span>The Woodlands Office Park</span>
+      </div>
+      <!-- Call Us -->
+      <div class="flex items-center justify-center space-x-2">
+        <i class="fas fa-phone-alt text-red-600 text-lg"></i>
+        <span>Call Us 086 152 8482</span>
+      </div>
+      <!-- Mail Us -->
+      <div class="flex items-center justify-center space-x-2">
+        <i class="fas fa-envelope text-red-600 text-lg"></i>
+        <span>info@latitaafrica.com</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="footer-big py-10">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+
+        <!-- Company Info -->
+        <div>
+          <div class="footer-widget space-y-4">
+            <img src="img/logo.jpeg" alt="Logo" class="w-48">
+            <p>follow Us</p>
+            <ul class="flex space-x-4 text-xl mt-4">
+  <li>
+    <a href="https://facebook.com" target="_blank" class="text-blue-600 hover:text-blue-800">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://twitter.com" target="_blank" class="text-blue-400 hover:text-blue-600">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://linkedin.com" target="_blank" class="text-blue-700 hover:text-blue-900">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://instagram.com" target="_blank" class="text-pink-500 hover:text-pink-700">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </li>
+</ul>
+          </div>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <div class="footer-widget">
+            <h4 class="font-semibold mb-4">Company</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#">Who is Latita Africa</a></li>
+              <li><a href="#">Ubuntu Connect</a></li>
+              <li><a href="#">fAQ</a></li>
+              <li><a href="#">Podcasts & Interview</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!--  -->
+        <div>
+          <div class="footer-widget">
+            
+            <ul class="space-y-2 text-sm">
+             <br>
+              <li><a href="#">The Latita Team</a></li>
+              <li><a href="#">Partnerships</a></li>
+              <li><a href="#">Industries</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Press Releases</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Our Services< -->
+        <div>
+          <div class="footer-widget">
+            <h4 class="font-semibold mb-4">Our Services</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#">Tax</a></li>
+              <li><a href="#">Advisory</a></li>
+              <li><a href="#">Business in Africa</a></li>
+              <li><a href="#">Corporate tax</a></li>
+              <li><a href="#">Value Added Tax (VAT)</a></li>
+    
+            </ul>
+          </div>
+        </div>
+
+
+
+        <div>
+  <div class="footer-widget">
+   
+    <ul class="space-y-2 text-sm">
+      <br>
+      <li><a href="#">Legal</a></li>
+      <li><a href="#">Risk Assurance</a></li>
+      <li><a href="#">Tax Debt And Dispute</a></li>
+      <li><a href="#">Individual Tax</a></li>
+      <li><a href="#">Crypto Asset Tax</a></li>
+    </ul>
+  </div>
+</div>
+        
+
+      </div>
+    </div>
+  </div>
+
+  
+</footer>
+
+</body>
+</html>
